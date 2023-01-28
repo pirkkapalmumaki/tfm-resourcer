@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Asset from './components/Asset'
+import Stack from 'react-bootstrap/Stack';
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+  <Container>
+    
+    <Stack gap={3} className="col-md-6 mx-auto">
+    <h1>Terraforming Mars resurssihallinta</h1>
+    <Asset asset='heat' effect='megacredit' amount='-4' production={true}/>
+    <Asset asset='megacredit' effect='megacredit'/>
+    <Asset asset='power' effect='heat'/>
+    <Asset asset='plant' effect='megacredit'/>
+    </Stack>
+    </Container>
+  </div> 
+  )
 }
 
 export default App;
